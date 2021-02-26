@@ -33,6 +33,18 @@ Regresa verdadero si se cumple la tolerancia para un punto x, y falso en caso co
 ## wolfe
 Dada una $alpha$, verifica si se cumplen las condiciones de Wolfe para un punto x.
 ## alpha
-Dada una x, calcula iterativamente $alpha$ hasta que cumpla las condiciones de Wolfe
+Dada x, calcula iterativamente $alpha$ hasta que cumpla las condiciones de Wolfe
 ## volver_pd
 Dada una **matriz** x, verifica si es positiva definida, si lo es regresa x, si no la convierte en positiva definida y regresa la matriz modificada
+## busqueda_lineal_newton
+Minimiza la función f, partiendo desde el punto inicial x, utilizando el algoritmo de búsqueda lineal de Newton. Sus otros parámetros, modificada y comparación, son booleanos que indican si se quiere usar búsqueda lineal modificada de Newton, y si se quiere hacer comparaciones, respectivamente. Si no se indican se toman como falsos. Regresa el punto óptimo donde se encontró el mínimo de f.
+## BFGS
+Minimiza la función f, partiendo desde el punto inicial x, utilizando el algoritmo BFGS. El parámetro comparación es un booleano que es verdadero si se quieren hacer comparaciones, y falso en otro caso; si no se indica se toma como falso. Regresa el punto xk donde se encontró el mínimo de f.
+## comparacion
+Si comparacion es verdadero en alguno de los algoritmos de minimización, se llama a esta función. Realiza la minimización por búsqueda lineal de Newton, así como por su versión modficada, y por BFGS, toma los tiempos de cada uno y los grafica.
+## Ejemplos
+Abajo de comparacion, está comentado un ejemplo con la función de Rosenbrock, y empieza en (0,0). A continuación se muestra una captura de pantalla de la consola al minimizar esta función con comparaciones.
+Después, está implementada una solución a un problema de optimización de cámaras de vigilancia.
+![Example screenshot](./img/ss.png)
+
+
